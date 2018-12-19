@@ -17,7 +17,7 @@ class TestController
     }
 
     public function helloAction(){
-        var_dump("hello world");
-
+        header('Content-Type: application/json');
+        echo json_encode("hello world");
     }
 }
