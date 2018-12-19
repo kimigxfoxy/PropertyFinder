@@ -9,10 +9,15 @@ namespace PropertyFinder\Controllers;
  */
 class TestController
 {
-    public function index($action,$id){
+    public function indexAction($action,$id){
 
         var_dump($action);
         var_dump($id);
+
+    }
+
+    public function helloAction(){
+        var_dump("hello world");
 
     }
 }

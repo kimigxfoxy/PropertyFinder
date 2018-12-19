@@ -2,31 +2,23 @@
 
 namespace PropertyFinder\Routing;
 
+/**
+ * @author Davison Mghanga Kimigho <dkimigz@gmail.com>
+ * Class that manages extraction of  $routeParams and $routeMappings
+ * Class Router
+ * @package PropertyFinder\Routing
+ */
 class Router
 {
 
-    private $x = array();
 
-//    static public function parse($url, $request)
-//    {
-//
-//        $url = trim($url);
-//
-//        if ($url == "/PHP_Rush_MVC/") {
-//            $request->controller = "tasks";
-//            $request->action = "index";
-//            $request->params = [];
-//        } else {
-//            $explode_url = explode('/', $url);
-//            $explode_url = array_slice($explode_url, 2);
-//            $request->controller = $explode_url[0];
-//            $request->action = $explode_url[1];
-//            $request->params = array_slice($explode_url, 2);
-//        }
-//
-//    }
-
-    static public function parse($routes, $uriPath){
+    /**
+     * @param $routes
+     * @param $uriPath
+     * @return array
+     * @throws \Exception
+     */
+    public function parse($routes, $uriPath){
 
         // Loop through every route and compare it with the URI
         foreach ($routes as $route => $routeMappings) {
@@ -51,8 +43,6 @@ class Router
         }
 
         // We didn't find a route match
-        return false;
+        throw new \Exception("Route not found: 404");
     }
 }
-
-?>
