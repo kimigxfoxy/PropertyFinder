@@ -1,12 +1,9 @@
 <?php
 namespace PropertyFinder\Controllers;
+use PropertyFinder\Config\Database;
+use PropertyFinder\Models\Journey;
+use PropertyFinder\Repository\JourneyRepository;
 
-/**
- * Created by PhpStorm.
- * User: hp 250
- * Date: 19/12/2018
- * Time: 12:10
- */
 class TestController
 {
     public function indexAction($action,$id){
@@ -17,7 +14,10 @@ class TestController
     }
 
     public function helloAction(){
+        $journeyRepository=new JourneyRepository();
+        $journey=$journeyRepository->findAll();
+        var_dump($journey);
         header('Content-Type: application/json');
-        echo json_encode("hello world");
+        echo json_encode($journey);
     }
 }

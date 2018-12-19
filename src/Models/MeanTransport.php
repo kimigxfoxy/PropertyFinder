@@ -9,4 +9,6 @@ abstract class MeanTransport
     protected $uniqueNumber;
     protected $boardingCardId;
     protected $name;
+
+    abstract protected function locomotion();
 }
