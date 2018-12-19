@@ -9,7 +9,7 @@
 namespace PropertyFinder\Models;
 
 
-class Train
+class Train extends MeanTransport
 {
 
 }

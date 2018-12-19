@@ -3,13 +3,15 @@
  * Created by PhpStorm.
  * User: hp 250
  * Date: 19/12/2018
- * Time: 14:55
+ * Time: 16:59
  */
 
 namespace PropertyFinder\Models;
 
 
-class Bus extends MeanTransport
+class Journey
 {
+    private $id;
+    private $boardingCards=array();
 
 }

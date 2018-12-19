@@ -1,13 +1,20 @@
 <?php
 namespace PropertyFinder\Models;
 
-/**
- * Created by PhpStorm.
- * User: hp 250
- * Date: 19/12/2018
- * Time: 14:53
- */
+
 class BoardingCard
 {
-
+    private $id;
+    private $uniqueNumber;
+    private $MeanTransportId;
+    private $journeyId;
+    private $cityDeparture;
+    private $cityDestination;
+    private $terminalDeparture;
+    private $terminalDestination;
+    private $gateDeparture;
+    private $gateDestination;
+    private $timeDeparture;
+    private $timeDestination;
+    private $seatNumber;
 }

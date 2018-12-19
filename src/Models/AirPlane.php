@@ -9,7 +9,7 @@
 namespace PropertyFinder\Models;
 
 
-class AirPlane
+class AirPlane extends MeanTransport
 {
 
 }
