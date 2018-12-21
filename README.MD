@@ -33,7 +33,7 @@ Clone this repository to your web root folder.
 
 ## Running the tests
 ```
-Check the file index.php to see how stater code is implimented
+Check the file index.php to see how to use/run API 
 
 Run This PHPUNIT command to test sorting algorithm: $phpunit --bootstrap ./vendor/autoload.php tests/src/Models/JourneyTest.php
 ```
