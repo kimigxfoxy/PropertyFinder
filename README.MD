@@ -18,17 +18,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 ```
-You need to have PHP 5.4. and above. Also you need apache web server to be running.
-For unit tests you need to have PHPUNIT instaled
-Composer installed for managing dependancies
+* You need to have PHP 5.4. and above. Also you need apache web server to be running.
+* For unit tests you need to have PHPUNIT instaled.
+* For managing UNIT test depenedencies you need to have composer.
 ```
 
 ### Installing
 ```
 Clone this repository to your web root folder. 
-Run command $composer install.
-Run command $composer update.
-And on your favourite browser go to http://<yourdomain/PropertyFinder/ to see the stater example
+* Run command $composer install.
+* Run command $composer update.
+* And on your favourite browser go to http://<yourdomain/PropertyFinder/ to see the stater example
 ```
 
 ## Running the tests
