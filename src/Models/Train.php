@@ -1,69 +1,37 @@
 <?php
 
-
 namespace PropertyFinder\Models;
 
+/**
+ * @author Davison Mghanga Kimigho <dkimigz@gmail.com>
+ * Train class that extends MeanTransport
+ * Class Train
+ * @package PropertyFinder\Models
+ */
 
 class Train extends MeanTransport
 {
+
     /**
-     * @return mixed
+     * Bus constructor.
+     * @param $id
+     * @param $name
+     * @param $seats
+     * @param  $locomotion
      */
-    public function getId()
+    public function __construct($id, $name, $seats,$locomotion)
     {
-        return $this->id;
+        $this->id=$id;
+        $this->name=$name;
+        $this->seats=$seats;
+        $this->locomotion=$this->setLocomotion($locomotion);
     }
 
     /**
-     * @return mixed
+     * Train locomotion
+     * @return string
      */
-    public function getUniqueNumber()
-    {
-        return $this->uniqueNumber;
-    }
-
-    /**
-     * @param mixed $uniqueNumber
-     */
-    public function setUniqueNumber($uniqueNumber)
-    {
-        $this->uniqueNumber = $uniqueNumber;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBoardingCardId()
-    {
-        return $this->boardingCardId;
-    }
-
-    /**
-     * @param mixed $boardingCardId
-     */
-    public function setBoardingCardId($boardingCardId)
-    {
-        $this->boardingCardId = $boardingCardId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-
-    public function locomotion() {
-        return "Train...";
+    public function setLocomotion($locomotion) {
+        return $locomotion;
     }
 }

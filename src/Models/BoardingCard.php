@@ -1,26 +1,88 @@
 <?php
 namespace PropertyFinder\Models;
 
+/**
+ * @author Davison Mghanga Kimigho <dkimigz@gmail.com>
+ * Class that stores boarding card information
+ * Class BoardingCard
+ * @package PropertyFinder\Models
+ */
 
 class BoardingCard
 {
+
+    /**
+     * @var integer
+     */
     private $id;
-    private $uniqueNumber;
-    private $meanTransportId;
-    private $journeyId;
-    private $cityDeparture;
-    private $cityDestination;
+    /**
+     * //Object of type eanTransport
+     * @var $MeanTransport
+     */
+    private $meanTransport;
+    /**
+     * @var string
+     */
+    private $departureCity;
+    /**
+     * @var string
+     */
+    private $destinationCity;
+    /**
+     * @var string
+     */
     private $terminalDeparture;
+    /**
+     * @var string
+     */
     private $terminalDestination;
+    /**
+     * @var string
+     */
     private $gateDeparture;
+    /**
+     * @var string
+     */
     private $gateDestination;
-    private $timeDeparture;
-    private $timeDestination;
+    /**
+     * @var integer
+     */
     private $seatNumber;
+    /**
+     * @var string
+     */
     private $baggageInfo;
 
     /**
-     * @return mixed
+     * BoardingCard constructor.
+     * @param $id
+     * @param $meanTransport //Type MeanTransport Object
+     * @param $cityDeparture
+     * @param $cityDestination
+     * @param $terminalDeparture
+     * @param $terminalDestination
+     * @param $gateDeparture
+     * @param $gateDestination
+     * @param $seatNumber
+     * @param $baggageInfo
+     */
+    public function __construct($id, $meanTransport, $cityDeparture, $cityDestination, $terminalDeparture,
+                                $terminalDestination, $gateDeparture, $gateDestination, $seatNumber, $baggageInfo)
+    {
+        $this->id = $id;
+        $this->meanTransport = $meanTransport;
+        $this->departureCity = $cityDeparture;
+        $this->destinationCity = $cityDestination;
+        $this->terminalDeparture = $terminalDeparture;
+        $this->terminalDestination = $terminalDestination;
+        $this->gateDeparture = $gateDeparture;
+        $this->gateDestination = $gateDestination;
+        $this->setSeatNumber($seatNumber);
+        $this->baggageInfo = $baggageInfo;
+    }
+
+    /**
+     * @return integer
      */
     public function getId()
     {
@@ -28,87 +90,63 @@ class BoardingCard
     }
 
     /**
-     * @return mixed
+     * @param integer $id
      */
-    public function getUniqueNumber()
+    public function setId($id)
     {
-        return $this->uniqueNumber;
+        $this->id = $id;
     }
 
     /**
-     * @param mixed $uniqueNumber
+     * @return $MeanTransport
      */
-    public function setUniqueNumber($uniqueNumber)
+    public function getMeanTransport()
     {
-        $this->uniqueNumber = $uniqueNumber;
+        return $this->meanTransport;
     }
 
     /**
-     * @return mixed
+     * @param mixed $meanTransport
      */
-    public function getMeanTransportId()
+    public function setMeanTransport($meanTransport)
     {
-        return $this->meanTransportId;
+        $this->meanTransport = $meanTransport;
     }
 
     /**
-     * @param mixed $meanTransportId
+     * @return string
      */
-    public function setMeanTransportId($meanTransportId)
+    public function getDepartureCity()
     {
-        $this->meanTransportId = $meanTransportId;
+        return $this->departureCity;
     }
 
     /**
-     * @return mixed
+     * @param string $departureCity
      */
-    public function getJourneyId()
+    public function setDepartureCity($departureCity)
     {
-        return $this->journeyId;
+        $this->departureCity = $departureCity;
     }
 
     /**
-     * @param mixed $journeyId
+     * @return string
      */
-    public function setJourneyId($journeyId)
+    public function getDestinationCity()
     {
-        $this->journeyId = $journeyId;
+        return $this->destinationCity;
     }
 
     /**
-     * @return mixed
+     * @param string $destinationCity
      */
-    public function getCityDeparture()
+    public function setDestinationCity($destinationCity)
     {
-        return $this->cityDeparture;
+        $this->destinationCity = $destinationCity;
     }
 
     /**
-     * @param mixed $cityDeparture
-     */
-    public function setCityDeparture($cityDeparture)
-    {
-        $this->cityDeparture = $cityDeparture;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCityDestination()
-    {
-        return $this->cityDestination;
-    }
-
-    /**
-     * @param mixed $cityDestination
-     */
-    public function setCityDestination($cityDestination)
-    {
-        $this->cityDestination = $cityDestination;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getTerminalDeparture()
     {
@@ -116,7 +154,7 @@ class BoardingCard
     }
 
     /**
-     * @param mixed $terminalDeparture
+     * @param string $terminalDeparture
      */
     public function setTerminalDeparture($terminalDeparture)
     {
@@ -124,7 +162,7 @@ class BoardingCard
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTerminalDestination()
     {
@@ -132,7 +170,7 @@ class BoardingCard
     }
 
     /**
-     * @param mixed $terminalDestination
+     * @param string $terminalDestination
      */
     public function setTerminalDestination($terminalDestination)
     {
@@ -140,7 +178,7 @@ class BoardingCard
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getGateDeparture()
     {
@@ -148,7 +186,7 @@ class BoardingCard
     }
 
     /**
-     * @param mixed $gateDeparture
+     * @param string $gateDeparture
      */
     public function setGateDeparture($gateDeparture)
     {
@@ -156,7 +194,7 @@ class BoardingCard
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getGateDestination()
     {
@@ -164,7 +202,7 @@ class BoardingCard
     }
 
     /**
-     * @param mixed $gateDestination
+     * @param string $gateDestination
      */
     public function setGateDestination($gateDestination)
     {
@@ -172,39 +210,7 @@ class BoardingCard
     }
 
     /**
-     * @return mixed
-     */
-    public function getTimeDeparture()
-    {
-        return $this->timeDeparture;
-    }
-
-    /**
-     * @param mixed $timeDeparture
-     */
-    public function setTimeDeparture($timeDeparture)
-    {
-        $this->timeDeparture = $timeDeparture;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTimeDestination()
-    {
-        return $this->timeDestination;
-    }
-
-    /**
-     * @param mixed $timeDestination
-     */
-    public function setTimeDestination($timeDestination)
-    {
-        $this->timeDestination = $timeDestination;
-    }
-
-    /**
-     * @return mixed
+     * @return integer
      */
     public function getSeatNumber()
     {
@@ -213,11 +219,33 @@ class BoardingCard
 
     /**
      * @param mixed $seatNumber
+     * @throws \Exception
      */
     public function setSeatNumber($seatNumber)
     {
-        $this->seatNumber = $seatNumber;
+        if(in_array($seatNumber,$this->meanTransport->getSeats())) {
+            $this->seatNumber = $seatNumber;
+        }else{
+            throw new \Exception("Seat Number not found in ".$this->meanTransport->getName());
+        }
     }
+
+    /**
+     * @return string
+     */
+    public function getBaggageInfo()
+    {
+        return $this->baggageInfo;
+    }
+
+    /**
+     * @param string $baggageInfo
+     */
+    public function setBaggageInfo($baggageInfo)
+    {
+        $this->baggageInfo = $baggageInfo;
+    }
+
 
 
 }

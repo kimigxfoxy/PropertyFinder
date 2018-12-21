@@ -1,74 +1,37 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hp 250
- * Date: 19/12/2018
- * Time: 14:55
- */
 
 namespace PropertyFinder\Models;
 
+/**
+ * @author Davison Mghanga Kimigho <dkimigz@gmail.com>
+ * AirPlane class that extends MeanTransport
+ * Class AirPlane
+ * @package PropertyFinder\Models
+ */
 
 class AirPlane extends MeanTransport
 {
 
     /**
-     * @return mixed
+     * Bus constructor.
+     * @param $id
+     * @param $name
+     * @param $seats
+     * @param  $locomotion
      */
-    public function getId()
+    public function __construct($id, $name, $seats,$locomotion)
     {
-        return $this->id;
+        $this->id=$id;
+        $this->name=$name;
+        $this->seats=$seats;
+        $this->locomotion=$this->setLocomotion($locomotion);
     }
 
     /**
-     * @return mixed
+     * Airplane locomotion
+     * @return string
      */
-    public function getUniqueNumber()
-    {
-        return $this->uniqueNumber;
-    }
-
-    /**
-     * @param mixed $uniqueNumber
-     */
-    public function setUniqueNumber($uniqueNumber)
-    {
-        $this->uniqueNumber = $uniqueNumber;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBoardingCardId()
-    {
-        return $this->boardingCardId;
-    }
-
-    /**
-     * @param mixed $boardingCardId
-     */
-    public function setBoardingCardId($boardingCardId)
-    {
-        $this->boardingCardId = $boardingCardId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function locomotion() {
-        return "Flying...";
+    public function setLocomotion($locomotion) {
+        return $locomotion;
     }
 }
