@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 You need to have PHP 5.4. and above. Also you need apache web server to be running.
 For unit tests you need to have PHPUNIT instaled
-Composer installed for managing depensancies
+Composer installed for managing dependancies
 ```
 
 ### Installing
