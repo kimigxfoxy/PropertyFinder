@@ -9,6 +9,8 @@ e.g ["Mombasa":"Nairobi","Nairobi":"Kisumu","Kisumu":"Kampala"]
 It uses hashing technique to avoid building a graph
 All steps require O(n) time so overall time complexity is O(n).
 
+To add a means of transport the abstract class MeanTransport can be extended.
+(The strategy design pattern can be considered to run algorithms at run time though not used in this case)
 
 ## Getting Started
 
