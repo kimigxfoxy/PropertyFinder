@@ -18,18 +18,22 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 You need to have PHP 5.4. and above. Also you need apache web server to be running.
 For unit tests you need to have PHPUNIT instaled
+Composer installed for managing depensancies
 ```
 
 ### Installing
 ```
-Clone this repository to your web root folder and on your favourite browser go to http://<yourdomain/PropertyFinder/ to see the stater example
+Clone this repository to your web root folder. 
+Run command $composer install.
+Run command $composer update.
+And on your favourite browser go to http://<yourdomain/PropertyFinder/ to see the stater example
 ```
 
 ## Running the tests
 ```
 Check the file index.php to see how stater code is implimented
 
-Run This PHPUNIT command to test sorting algorithm: phpunit --bootstrap ./vendor/autoload.php tests/src/Models/JourneyTest.php
+Run This PHPUNIT command to test sorting algorithm: $phpunit --bootstrap ./vendor/autoload.php tests/src/Models/JourneyTest.php
 ```
 
 ## Built With
