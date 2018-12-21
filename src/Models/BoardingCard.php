@@ -16,7 +16,7 @@ class BoardingCard
      */
     private $id;
     /**
-     * //Object of type eanTransport
+     * //Object of type MeanTransport
      * @var $MeanTransport
      */
     private $meanTransport;
