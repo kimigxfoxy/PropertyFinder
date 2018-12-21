@@ -1,5 +1,4 @@
 <?php
-
 namespace PropertyFinder\Models;
 
 /**

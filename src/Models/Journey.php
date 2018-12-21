@@ -1,5 +1,4 @@
 <?php
-
 namespace PropertyFinder\Models;
 
 /**
@@ -147,7 +146,8 @@ class Journey
      * @param $searchKey $destinationCity
      * @return bool
      */
-    private function searchForBoardingInReverseObjectArrayGivenDestinationCity($arrayToSearch, $searchKey) {
+    private function searchForBoardingInReverseObjectArrayGivenDestinationCity($arrayToSearch, $searchKey)
+    {
         $found=false;
         foreach ($arrayToSearch as $key => $value){
             if($value->getDepartureCity() == $searchKey){
@@ -165,7 +165,8 @@ class Journey
      * @param $searchKey $destinationCity
      * @return BoardingCard
      */
-    private function getBoardingCardObjectInArrayGivenDestinationCity($arrayToSearch, $searchKey) {
+    private function getBoardingCardObjectInArrayGivenDestinationCity($arrayToSearch, $searchKey)
+    {
         $boardingCard=null;
         foreach ($arrayToSearch as $key => $value){
             if($value->getDepartureCity() == $searchKey){
